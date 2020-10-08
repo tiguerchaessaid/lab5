@@ -1,0 +1,16 @@
+1) pour créer un shell script :
+   créer un fichier avec l'extension .sh
+   #!/bin/bash
+   rajouter la permission d'exécussion     chmod  +x nom_script
+   pour éxécuter un script : ./nom_script
+   
+   pour déboger un script bash -x nom_script.sh
+   
+********************************variable**********************************************************
+
+ créer une variable:  nom_variable="variablevalue"  ....... ne pas mettre d'espace avant et après =
+
+ pour afficher une varaible:  echo $nom_variable     dans le script
+ 
+ 
+
