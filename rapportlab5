@@ -1,10 +1,10 @@
-1) pour créer un shell script :
+1) ***********************************************************pour créer un shell script :******************************************
    créer un fichier avec l'extension .sh
    #!/bin/bash
    rajouter la permission d'exécussion     chmod  +x nom_script
    pour éxécuter un script : ./nom_script
    
-   pour déboger un script bash -x nom_script.sh
+   pour débogger un script bash -x nom_script.sh
    
 ********************************variable**********************************************************
 
@@ -12,5 +12,83 @@
 
  pour afficher une varaible:  echo $nom_variable     dans le script
  
- 
+ creer une variable dans le script sans affectation ( c'est l'utilisateur qui vas introduire le contenu  : read npm_variable
 
+
+       read -p   "introduiser un entier" var
+
+
+ 
+ 2)****************************** script "variable"*******************************
+ **********************************************************************************
+ création de deux variables var1 et var2
+
+demander à l'utilisateur d'introduiser deux entiers par la commande 
+read -p "introduiser un entier:" var1
+read -p "introduiser un entier:" var2
+
+comparaison entre les deux valeurs introduites par l'utilisateur:
+if [ $var1 -lt $var2 ]
+
+then echo " $var1 est inferieur à $var2"
+elif [ $var1 -gt $var2 ]
+then
+        echo "$var1 est superieur à $var2"
+else
+        echo " les deux nombres sont égaux"
+fi
+
+
+3) ***************************************script list_répertoire***************************************
+#!/bin/bash
+
+
+
+for i in '~/Documents/labs/lab4/5AS05-partie4'
+
+do
+        if [ -d $i ]
+        then
+                ls $i
+        else 
+                echo " le pas de répertoire"
+        fi
+done
+
+
+4) 
+for f in cd '~/Documents/labs/lab4/5AS05-partie4'
+do
+        if [ -d $f ]
+        then
+                ls $f
+       
+        fi
+done
+
+
+5)
+
+for f in cd '~/Documents/labs/lab4/5AS05-partie4'
+do
+        if [ -d $f ]
+        then
+                ls $f
+        else
+                echo" le répertoire n'existe pas"
+        fi
+done
+
+
+
+
+
+
+
+
+
+
+~                                                                               
+~                       
+
+/home/essaid/Documents/labs/lab4/5AS05-partie4
